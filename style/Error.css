@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Pacifico&family=Roboto&family=Tilt+Prism&family=Yanone+Kaffeesatz&display=swap');
+
+body {
+    font-family: 'Handjet', cursive;
+    background-color: rgb(21, 20, 20);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+h1 {
+    margin: 0;
+    font-size: 60px;
+}
+.back-button {
+    font-family: 'Handjet', cursive;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    width: 100px;
+    height: 40px;
+    font-size: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    color:white;
+}
+.back-button:hover {
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: none;
+    color:white;
+}
+.Error-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 100px;
+    width: 600px;
+    height: 150px;
+    font-size: 18px;
+    margin-top: 40px;
+}

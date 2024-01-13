@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Pacifico&family=Roboto&family=Tilt+Prism&family=Yanone+Kaffeesatz&display=swap');
+
+body {
+    background-image: url("Images/StarBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 97vh;
+}
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 60px;
+}
+.data {
+    text-align: center;
+    font-family: 'Handjet', cursive;
+    color: white;
+}
+
+.MapContainer {
+    width: 500px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Map{
+    width: 90%;
+    height: 90%;
+}
+.map{
+    width: 100%;
+    height:100%;
+}
+.IntroContainer {
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImageContainer {
+    margin: 15px;
+    width: 320px;
+    height:250px;
+    border-radius: 20px;
+}
+.MainData {
+    width:250px;
+}
+
+.BandImage {
+    width: 320px;
+    height:250px;
+    border-radius: 20px;
+}
+
+.CreationDate, .FirstAlbum {
+    font-size: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 780px;
+    font-size:20px;
+}
+
+.cards .Members,
+.Locations,
+.Dates {
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+}
+
+.cards .Dates, .Locations {
+    font-size: 18px;
+}
+
+.cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 270px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+    padding-bottom: 20px;
+}
+ul, li{
+    margin:0;
+    padding:0;
+}
+
+.cards .card:hover {
+    transform: scale(1.1, 1.1);
+    background: linear-gradient(43deg, rgb(65, 88, 208, 0.7) 0%, rgb(200, 80, 192, 0.7) 46%, rgb(255, 204, 112, 0.7) 100%);
+}
+
+.cards:hover>.card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+}

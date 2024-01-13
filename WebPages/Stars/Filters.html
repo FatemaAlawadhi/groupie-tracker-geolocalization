@@ -1,0 +1,305 @@
+{{ define "filter" }}
+<div class="Filters">
+    <div class="MembersFilter">
+        <p class="MembersText">Number of Members</p>
+        <div class="CheckboxContainer">
+            <input type="checkbox" class="checkbox1" id="checkbox1">
+            <label for="checkbox1">1</label><br>
+
+            <input type="checkbox" class="checkbox2" id="checkbox2">
+            <label for="checkbox2">2</label><br>
+
+            <input type="checkbox" class="checkbox3" id="checkbox3">
+            <label for="checkbox3">3</label><br>
+
+            <input type="checkbox" class="checkbox4" id="checkbox4">
+            <label for="checkbox4">4</label><br>
+
+            <input type="checkbox" class="checkbox5" id="checkbox5">
+            <label for="checkbox5">5</label><br>
+
+            <input type="checkbox" class="checkbox6" id="checkbox6">
+            <label for="checkbox6">6</label><br>
+
+            <input type="checkbox" class="checkbox7" id="checkbox7">
+            <label for="checkbox7">7</label><br>
+
+            <input type="checkbox" class="checkbox8" id="checkbox8">
+            <label for="checkbox8">8</label><br>
+        </div>
+
+    </div>
+    <div class="CreationDate">
+        <p class="CreationdateT">Creation Date</p>
+        <div class="RangeSlider">
+            <input type="range" id="rangeFilterCreationDateLower" min="1958" max="2015" value="1958" class="range-slider" step="1">
+            <span id="rangeValueCreationDateLower">1958</span>
+            <input type="range" id="rangeFilterCreationDateUpper" min="1958" max="2015" value="2015" class="range-slider" step="1">
+            <span id="rangeValueCreationDateUpper">2015</span>
+        </div>
+    </div>
+    <div class="FirstAlbum">
+        <p class="CreationdateT">First Album Date</p>
+        <div class="RangeSlider">
+            <input type="range" id="rangeFilterFirstAlbumLower" min="1963" max="2018" value="1963" class="range-slider"  step="1">
+            <span id="rangeValueFirstAlbumLower">1963</span>
+            <input type="range" id="rangeFilterFirstAlbumUpper" min="1963" max="2018" value="2018" class="range-slider"  step="1">
+            <span id="rangeValueFirstAlbumUpper">2018</span>
+        </div>
+    </div>
+    <div class="ConcertDate">
+        <div class="Rangefilter">
+            <label for="ConcertDatesInput">Concert Date</label>
+            <input type="date" id="ConcertDatesInput">
+        </div>
+    </div>
+    <div class="Locations">
+        <p>Locations</p>
+        <div class="LocationCN">
+            <label for="countryFilter">Country:</label>
+            <select id="countryFilter">
+                <option value="Argentina">Argentina</option>
+                <option value="Australia">Australia</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Costa-rica">Costa Rica</option>
+                <option value="Czechia">Czechia</option>
+                <option value="Denemark">Denmark</option>
+                <option value="Finland">Finland</option>
+                <option value="France">France</option>
+                <option value="French-polynesia">French Polynesia</option>
+                <option value="Germany">Germany</option>
+                <option value="Greece">Greece</option>
+                <option value="Hungary">Hungary</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Italy">Italy</option>
+                <option value="Japan">Japan</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Norway">Norway</option>
+                <option value="Netherland">Netherlands</option>
+                <option value="Netherland-antilles">Netherlands Antilles</option>
+                <option value="New-caledonia">New Caledonia</option>
+                <option value="New-zealand">New Zealand</option>
+                <option value="Peru">Peru</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Poland">Poland</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Romania">Romania</option>
+                <option value="Saudi-arabia">Saudi Arabia</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="South-korea">South Korea</option>
+                <option value="Spain">Spain</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Taiwan">Taiwan</option>
+                <option value="Thailand">Thailand</option>
+                <option value="UK">United Kingdom</option>
+                <option value="United-arab-emirates">United Arab Emirates</option>
+                <option value="USA">United States</option>
+            </select>
+        </div>
+        <div class="LocationCT">
+            <label for="cityFilter">City:</label>
+            <select id="cityFilter">
+                <option value="Aalborg">Aalborg</option>
+                <option value="Amsterdam">Amsterdam</option>
+                <option value="Atlanta">Atlanta</option>
+                <option value="Aberdeen">Aberdeen</option>
+                <option value="Anaheim">Anaheim</option>
+                <option value="Antwerp">Antwerp</option>
+                <option value="Aarhus">Aarhus</option>
+                <option value="Abu-dhabi">Abu Dhabi</option>
+                <option value="Auckland">Auckland</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Athens">Athens</option>
+                <option value="Arras">Arras</option>
+                <option value="Amityville">Amityville</option>
+                <option value="Bratislava">Bratislava</option>
+                <option value="Budapest">Budapest</option>
+                <option value="Bilbao">Bilbao</option>
+                <option value="Bogota">Bogota</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Boulogne-billancourt">Boulogne-billancourt</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Burriana">Burriana</option>
+                <option value="Birmingham">Birmingham</option>
+                <option value="Boston">Boston</option>
+                <option value="Brooklyn">Brooklyn</option>
+                <option value="Brisbane">Brisbane</option>
+                <option value="Brixton">Brixton</option>
+                <option value="Burswood">Burswood</option>
+                <option value="Bangkok">Bangkok</option>
+                <option value="Buenos-aires">Buenos Aires</option>
+                <option value="Belo-horizonte">Belo Horizonte</option>
+                <option value="Brasilia">Brasilia</option>
+                <option value="California">California</option>
+                <option value="Copenhagen">Copenhagen</option>
+                <option value="Cuxhaven">Cuxhaven</option>
+                <option value="Canton">Canton</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Cleveland">Cleveland</option>
+                <option value="Cardiff">Cardiff</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Changzhou">Changzhou</option>
+                <option value="Charlotte">Charlotte</option>
+                <option value="Cincinnati">Cincinnati</option>
+                <option value="Dunedin">Dunedin</option>
+                <option value="Dusseldorf">Dusseldorf</option>
+                <option value="Doha">Doha</option>
+                <option value="Del-mar">Del Mar</option>
+                <option value="Dublin">Dublin</option>
+                <option value="Dallas">Dallas</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Eindhoven">Eindhoven</option>
+                <option value="Frankfurt">Frankfurt</option>
+                <option value="Florida">Florida</option>
+                <option value="Freyming-merlebach">Freyming-Merlebach</option>
+                <option value="Frauenfeld">Frauenfeld</option>
+                <option value="Florence">Florence</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Gothenburg">Gothenburg</option>
+                <option value="Glasgow">Glasgow</option>
+                <option value="Grand-rapids">Grand Rapids</option>
+                <option value="Groningen">Groningen</option>
+                <option value="Gdynia">Gdynia</option>
+                <option value="Hamburg">Hamburg</option>
+                <option value="Hong-kong">Hong Kong</option>
+                <option value="Houston">Houston</option>
+                <option value="Hershey">Hershey</option>
+                <option value="Huizhou">Huizhou</option>
+                <option value="Indianapolis">Indianapolis</option>
+                <option value="Imola">Imola</option>
+                <option value="Inglewood">Inglewood</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Klagenfurt">Klagenfurt</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Krakow">Krakow</option>
+                <option value="Los-angeles">Los Angeles</option>
+                <option value="London">London</option>
+                <option value="Lausanne">Lausanne</option>
+                <option value="Lyon">Lyon</option>
+                <option value="Lisbon">Lisbon</option>
+                <option value="Leipzig">Leipzig</option>
+                <option value="Las-vegas">Las Vegas</option>
+                <option value="Lima">Lima</option>
+                <option value="Landgraaf">Landgraaf</option>
+                <option value="La-plata">La Plata</option>
+                <option value="Minsk">Minsk</option>
+                <option value="Manchester">Manchester</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Merkers">Merkers</option>
+                <option value="Maine">Maine</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Monchengladbach">Monchengladbach</option>
+                <option value="Mexico-city">Mexico City</option>
+                <option value="Monterrey">Monterrey</option>
+                <option value="Messouri">Messouri</option>
+                <option value="Madison">Madison</option>
+                <option value="Milan">Milan</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Montreal">Montreal</option>
+                <option value="Minneapolis">Minneapolis</option>
+                <option value="Manila">Manila</option>
+                <option value="Melbourne">Melbourne</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Munich">Munich</option>
+                <option value="Mannheim">Mannheim</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Munich">Munich</option>
+                <option value="North-carolina">North Carolina</option>
+                <option value="Nagoya">Nagoya</option>
+                <option value="Noumea">Noumea</option>
+                <option value="New-south-wales">New South Wales</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New-york">New York</option>
+                <option value="Nimes">Nimes</option>
+                <option value="Napoca">Napoca</option>
+                <option value="New-hampshire">New Hampshire</option>
+                <option value="Newark">Newark</option>
+                <option value="New-orleans">New Orleans</option>
+                <option value="Nickelsdorf">Nickelsdorf</option>
+                <option value="Osaka">Osaka</option>
+                <option value="Ostrava">Ostrava</option>
+                <option value="Oulu">Oulu</option>
+                <option value="Oslo">Oslo</option>
+                <option value="Omaha">Omaha</option>
+                <option value="Okland">Okland</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Penrose">Penrose</option>
+                <option value="Playa-del-carmen">Playa del Carmen</option>
+                <option value="Papeete">Papeete</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Pagney-derriere-barine">Pagney-derriere-barine</option>
+                <option value="Paris">Paris</option>
+                <option value="Philadelphia">Philadelphia</option>
+                <option value="Pittsburgh">Pittsburgh</option>
+                <option value="Pico-rivera">Pico Rivera</option>
+                <option value="Porto-alegre">Porto Alegre</option>
+                <option value="Prague">Prague</option>
+                <option value="Queensland">Queensland</option>
+                <option value="Quebec">Quebec</option>
+                <option value="Rio-de-janeiro">Rio de Janeiro</option>
+                <option value="Recife">Recife</option>
+                <option value="Riyadh">Riyadh</option>
+                <option value="Rosemont">Rosemont</option>
+                <option value="Rotselaar">Rotselaar</option>
+                <option value="Saitama">Saitama</option>
+                <option value="Sao-paulo">Sao Paulo</option>
+                <option value="San-isidro">San Isidro</option>
+                <option value="Stockholm">Stockholm</option>
+                <option value="South-carolina">South Carolina</option>
+                <option value="Sion">Sion</option>
+                <option value="Salem">Salem</option>
+                <option value="Skanderborg">Skanderborg</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Sochaux">Sochaux</option>
+                <option value="Sanya">Sanya</option>
+                <option value="Seatlle">Seattle</option>
+                <option value="St-louis">St. Louis</option>
+                <option value="Santiago">Santiago</option>
+                <option value="Seville">Seville</option>
+                <option value="Seoul">Seoul</option>
+                <option value="San-francisco">San Francisco</option>
+                <option value="Scheessel">Scheessel</option>
+                <option value="Set-gallen">St. Gallen</option>
+                <option value="San-jose">San Jose</option>
+                <option value="Texas">Texas</option>
+                <option value="Toronto">Toronto</option>
+                <option value="Turku">Turku</option>
+                <option value="Taipei">Taipei</option>
+                <option value="Utah">Utah</option>
+                <option value="Uniondale">Uniondale</option>
+                <option value="Victoria">Victoria</option>
+                <option value="Vienna">Vienna</option>
+                <option value="Vancouver">Vancouver</option>
+                <option value="Werchter">Werchter</option>
+                <option value="Westcliff-on-sea">Westcliff-on-Sea</option>
+                <option value="Washington">Washington</option>
+                <option value="West-melbourne">West Melbourne</option>
+                <option value="Warsaw">Warsaw</option>
+                <option value="Windsor">Windsor</option>
+                <option value="Wellington">Wellington</option>
+                <option value="Willemstad">Willemstad</option>
+                <option value="Yogyakarta">Yogyakarta</option>
+                <option value="Zaragoza">Zaragoza</option>
+                <option value="Zurich">Zurich</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <button class="Reset">Reset</button>
+    </div>
+</div>
+{{ end }}

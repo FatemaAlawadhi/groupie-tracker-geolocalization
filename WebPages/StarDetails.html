@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Groupie Tracker</title>
+    <link rel="stylesheet" type="text/css" href="../style/StarDetails.css">
+    <link rel="stylesheet" type="text/css" href="../../style/Nav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=ApZ8vBLSKATZ_ByiXrOzPJ4DKmeGcsIYCL2XgmLQt8-MIrbP5fEYW7z4mTdvojwZ&callback=initMap' async defer></script>
+    <script type='text/javascript'>
+        function initMap() {
+            var map = new Microsoft.Maps.Map(document.getElementById('map'), {
+                center: new Microsoft.Maps.Location(0, 0),
+                zoom: 1
+            });
+
+            function showMap(lat, lng) {
+                var location = new Microsoft.Maps.Location(lat, lng);
+                var pin = new Microsoft.Maps.Pushpin(location);
+                map.entities.push(pin);
+            }
+
+            var locationMap = {{ .LocationMap }};
+
+            for (var i = 0; i < locationMap.length; i++) {
+                var lat = parseFloat(locationMap[i].latitude);
+                var lng = parseFloat(locationMap[i].longitude);
+                showMap(lat, lng);
+                console.log(lat);
+                console.log(lng);
+            }
+        }
+
+        window.addEventListener('load', function() {
+            var container = document.querySelector('.data');
+            var mapContainer = document.querySelector('.MapContainer');
+
+            function setMapContainerHeight() {
+                var containerHeight = container.offsetHeight;
+                mapContainer.style.height = containerHeight + 'px';
+            }
+
+            setMapContainerHeight(); // Set initial height
+
+            window.addEventListener('resize', function() {
+                clearTimeout(window.resizeTimeout);
+                window.resizeTimeout = setTimeout(setMapContainerHeight, 250);
+            }); // Adjust height on window resize with a debounce
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="/about" class="logo">
+            <h1>Groupie Tracker</h1>
+        </a>
+        <nav class="NavBar">
+            <a href="/">Home</a>
+            <a href="/stars">Stars</a>
+            <a href="/about">About us</a>
+        </nav>
+    </header>
+    <div class="page">
+        <div class="Container">
+            <div class="data">
+                <div class="IntroContainer">
+                    <div class="ImageContainer">
+                        <img class="BandImage" src="{{ .Image }}" alt="Star Image">
+                    </div>
+                    <div class="MainData">
+                        <h1 class="Name">{{ .Name }}</h1>
+                        <p class="CreationDate">Creation Date: {{ .CreationDate }}</p>
+                        <p class="FirstAlbum">First Album: {{ .FirstAlbum }}</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card Members">
+                        <p>Members:</p>
+                        <ul>
+                            {{ range .Members }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    <div class="card Locations">
+                        <p>Locations:</p>
+                        <ul>
+                            {{ range .LocationDates }}
+                            <li>Country: {{ .Country }}</li>
+                            <ul>
+                                <li>City: {{.City }}</li>
+                            </ul>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    <div class="card Dates">
+                        <p>Dates:</p>
+                        <ul>
+                            {{ range .LocationDates }}
+                            <li>{{ .Country }}-{{ .City }}:
+                                <ul>
+                                    {{ range .Dates }}
+                                    <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="MapContainer">
+                <div class="Map">
+                    <div class="map" id="map"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
